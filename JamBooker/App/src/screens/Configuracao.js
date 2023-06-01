@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Reviews = ({navigation}) => {
+const Configuracao = ({navigation}) => {
   return (
     <View>
-      <Text>Reviews</Text>
+      <Text>Configuracao</Text>
     </View>
   )
 }
 
-export default Reviews
+export default Configuracao
 
 const styles = StyleSheet.create({})

@@ -66,11 +66,11 @@ const RegisterUser = ({ navigation }) => {
                 value={admin}
                 setValue={setAdmin}
             />
-            <CustomButton text="Register" onPress={onRegisterPressed} />
+            <CustomButton text="REGISTRAR" onPress={onRegisterPressed} />
             <TouchableOpacity
                 onPress={() => navigation.navigate("Login")}
             >
-                <Text>
+                <Text style={styles.regularText}>
                     Já tem uma conta?{" "}
                     <Text style={styles.loginText}>Faça o login</Text>
                 </Text>
@@ -82,8 +82,7 @@ const styles = StyleSheet.create({
     view: {
         alignItems: 'center',
         padding: 20,
-        //backgroundColor: '#00FF87',
-        backgroundImage: "linear-gradient(to bottom, #7338FD, #2C3237)",
+        backgroundColor: '#ede9ea',
         flex: 1
     },
 
@@ -94,8 +93,12 @@ const styles = StyleSheet.create({
     },
     loginText: {
         fontWeight: "bold",
-        color: "#F592CD",
+        color: "#c15eff",
     },
+    regularText: {
+
+        fontSize: '11px'
+    }
 });
 
 export default RegisterUser;

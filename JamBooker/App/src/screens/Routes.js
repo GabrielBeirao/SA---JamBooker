@@ -7,7 +7,9 @@ import { Entypo } from '@expo/vector-icons'
 
 import Home from './Home'
 import Studios from './Studios'
-import Reviews from './Reviews'
+import Reviews from './Busca'
+import Agenda from './Agenda'
+import Configuracao from './Configuracao'
 
 const Tab = createBottomTabNavigator();
 
@@ -27,31 +29,51 @@ const Routes = ({ navigation }) => {
     }}>
 
     <Tab.Screen
-        name='Home'
+        name='user'
         component={Home}
         options={{
             tabBarIcon: () => (
-                <Entypo name='home' size={30} />
+                <Entypo name='user' size={30} />
             )
         }}
     />
 
     <Tab.Screen
-            name='Studios'
+            name='Favoritos'
             component={Studios}
             options={{
                 tabBarIcon: () => (
-                    <Entypo name='bowl' size={30} />
+                    <Entypo name='star' size={30} />
                 )
             }}
         />
 
     <Tab.Screen
-            name='Reviews'
+            name='Busca Avançada'
             component={Reviews}
             options={{
                 tabBarIcon: () => (
-                    <Entypo name='fingerprint' size={30} />
+                    <Entypo name='circle-with-plus' size={30} />
+                )
+            }}
+        />
+
+    <Tab.Screen
+            name='Agenda'
+            component={Agenda}
+            options={{
+                tabBarIcon: () => (
+                    <Entypo name='calendar' size={30} />
+                )
+            }}
+        />
+
+    <Tab.Screen style={styles.menu}
+            name='Configuracao'
+            component={Configuracao}
+            options={{
+                tabBarIcon: () => (
+                    <Entypo name='cog' size={30} />
                 )
             }}
         />
@@ -63,4 +85,13 @@ const Routes = ({ navigation }) => {
 
 export default Routes
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+    menu: {
+
+        backgroundColor: 'red'
+
+    }
+
+
+})

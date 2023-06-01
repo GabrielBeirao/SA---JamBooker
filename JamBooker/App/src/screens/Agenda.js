@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Home = ({navigation}) => {
+const Agenda = ({navigation}) => {
   return (
     <View>
-      <Text>Perfil</Text>
+      <Text>Agenda</Text>
     </View>
   )
 }
 
-export default Home
+export default Agenda
 
 const styles = StyleSheet.create({})

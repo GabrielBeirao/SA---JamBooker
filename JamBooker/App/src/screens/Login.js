@@ -54,12 +54,12 @@ const Login = ({ navigation }) => {
                 secureTextEntry={true}
             />
 
-            <CustomButton text="Login" onPress={onLoginPressed} />
+            <CustomButton text="ENTRAR" onPress={onLoginPressed} />
 
             <TouchableOpacity
                 onPress={() => navigation.navigate("RegisterUser")}
             >
-                <Text>
+                <Text style={styles.regularText}>
                     Não tem uma conta?{" "}
                     <Text style={styles.createAccountText}>
                         Crie uma
@@ -74,8 +74,7 @@ const styles = StyleSheet.create({
     view: {
         alignItems: 'center',
         padding: 20,
-        //backgroundColor: '#00FF87',
-        backgroundImage: "linear-gradient(to bottom, #7338FD, #2C3237)",
+        backgroundColor: '#ede9ea',
         flex: 1
 
     },
@@ -87,8 +86,13 @@ const styles = StyleSheet.create({
     },
     createAccountText: {
         fontWeight: "bold",
-        color: "#F592CD",
+        color: "#c15eff",
+        fontSize: '11px'
     },
+    regularText: {
+
+        fontSize: '11px'
+    }
 });
 
 export default Login;
